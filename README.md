@@ -10,7 +10,7 @@
 
 ## Live Demo
 
--
+[-](https://pokedehapp.netlify.app)
 
 ## Getting Started with Create React App
 
