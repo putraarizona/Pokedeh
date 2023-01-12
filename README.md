@@ -1,94 +1,84 @@
-# React Assignment 2: PokeDeh
-
-Untuk exercise kali ini, silakan teman-teman buka file `src\App.js`, jangan lupa untuk menjalankan `pnpm start` untuk menjalankan server Reactnya.
-
-Untuk menjalankan test-casenya, selain bisa menggunakan `grader-cli test`, teman-teman juga bisa menggunakan `pnpm test`.
-
-## Styling
-
-Gunakan Chakra-UI, disarankan bermain-main dengan komponen-komponen menarik Chakra UI di [sini](https://chakra-ui.com/docs/components). Diperbolehkan juga mengganti warna. Mari jadikan web kamu menarik :D
-
-## Routing
-
-Kita memiliki 3 halaman:
-
-<!-- ### Homepage: `/`
-
-Component: `src/Home.js`
-
-Homepage hanya berisi tulisan `Welcome!`
-
-![homepage](assets/homePage.png) -->
-
-### Pokemon List Page: `/pokemon`
-
-Component: `src/PokemonList.js`
-
-Halaman ini berisi list pokemon yang diambil dari API [pokeapi](https://pokeapi.co/). Di halaman ini ditampilkan 20 pokemon per halaman.
+# PokeDeh
 
 ![pokemon list](assets/pokemonPage.png)
 
-Di bagian atas, ada button navigasi:
-
-- Prev: untuk berpindah ke halaman sebelumnya
-- Next: untuk berpindah ke halaman selanjutnya
-
-Jika halaman sebelumnya tidak ada (halaman ke 0), maka button Prev akan disabled.
-
-Perpindahan halaman dilakukan dengan mengubah query parameter `page` di URL:
-
-`/pokemon?page=2`
-
-Khusus untuk halaman satu, query parameter `page` tidak perlu ditampilkan:
-
-`/pokemon` sama dengan `/pokemon?page=1`
-
-Masing-masing pokemon ditampilkan dalam bentuk Card, jika di klik, maka akan menuju ke halaman detail pokemon terkait.
-
-Untuk masing-masing Cardnya, tampilkan:
-
-- Nama pokemon
-- Gambar pokemon (`front_default`, `back_default`, `front_shiny`, `back_shiny`). Untuk masing-masing gambar, tambahkan `alt` attribute sebagai berikut: `Front Default`, `Back Default`, `Front Shiny`, `Back Shiny`
-- Pokemon Types
-
-### Pokemon Detail Page: `/pokemon/:pokemonId`
-
-Component: `src/PokemonDetail.js`
-
-Halaman ini berisi detail dari pokemon yang dipilih.
-
 ![pokemon detail](assets/pokemonDetailPage.png)
-
-Detail yang perlu ditampilkan field:
-
-- `name`
-- `type.name`
-- `height`
-- `weight`
-- `abilities`
-- `stats`
-
-### Legend Page: `/legend`
-
-Component: `src/Legend.js` dan `src/ProtectedRoute.js`
-
-Ini adalah halaman rahasia! :D
 
 ![legend page](assets/legendPage.png)
 
-Untuk masuk ke halaman ini, kita perlu menambahakan query parameter password dengan value `secret` di URL:
-
-`/legend?password=secret`
-
-Jika password salah, atau tidak ada query parameter password, maka akan diredirect ke `/unauthorized`.
-
-Pssst, a little secret between us: halaman ini bisa dibuka juga dengan **double** click menu "Legend":
-
-![menu](assets/menu.png)
-
-### Unauthorized Page: `/unauthorized`
-
-Component: `src/Unauthorized.js`
-
-Halaman ini hanya menampilkan text `You are not authorized to open this page`
 ![unauthorized page](assets/unauthorizedPage.png)
+
+## Live Demo
+
+-
+
+## Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
